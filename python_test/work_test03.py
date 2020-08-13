@@ -48,7 +48,20 @@ dic1["oldboy"]["alex"].pop(1)
 print(dic1)
 # 三：集合练习题
 # 1：[‘taobao’,'jingdong','alibaba','baidu','taobao']对元素去重复
+s = {'taobao', 'jingdong', 'alibaba', 'baidu', 'taobao'}
+print(s)
 # 2：分别有两个集合{1,2,1,3,4,5,6,7}，{1,2,3,8,9,7,10}，求两个集合的差集、并集、交集
+s1 = {1, 2, 1, 3, 4, 5, 6, 7}
+s2 = {1, 2, 3, 8, 9, 7, 10}
+# 并集
+print(s1 | s2)
+print(s1.union(s2))
+# 交集
+print(s1 & s2)
+print(s1.intersection(s2))
+# 差集
+print(s1 - s2)
+print(s1.difference(s2))
 # 四、格式化输出练习题：
 # 1：题目：通过控制台获取你的相关信息（包括下面内容），对自己进行自我介绍，
 # 要求使用上面两种方式来实现：
@@ -58,3 +71,26 @@ print(dic1)
 # 	hobby	爱好
 # 	all_salary	年收入
 # 	work_years	工作年限
+name = input("请输入您的姓名：")
+age = int(input("请输入年龄："))
+work_address = input("工作地：")
+hobby = input("爱好：")
+all_salary = float(input("年收入："))
+work_years = float(input("工作年限："))
+print('''
+    name:{}
+    age:{}
+    work_address:{}
+    hobby:{}
+    all_salary:{}
+    work_years:{}
+    '''.format(name, age, work_address, hobby, all_salary, work_years)
+)
+print('''
+    name:%s
+    age:%d
+    work_address:%s
+    hobby:%s
+    all_salary:%f
+    work_years:%f  
+'''%(name, age, work_address, hobby, all_salary, work_years))
