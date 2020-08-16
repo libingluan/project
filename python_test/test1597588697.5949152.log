@@ -1,0 +1,5 @@
+ 2020-08-16 22:38:17,596 --work_test0815.py--DEBUG ->>>>这是debug 
+ 2020-08-16 22:38:17,598 --work_test0815.py--INFO ->>>>这是info 
+ 2020-08-16 22:38:17,599 --work_test0815.py--WARNING ->>>>这是warning 
+ 2020-08-16 22:38:17,599 --work_test0815.py--ERROR ->>>>这是error 
+ 2020-08-16 22:38:17,599 --work_test0815.py--CRITICAL ->>>>这是critical 
