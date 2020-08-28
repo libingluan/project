@@ -7,28 +7,41 @@
 # 钢琴Piano声音："钢琴美妙无比"
 # 小提琴Violin声音："小提琴来啦"
 # 3）用main类，多态的方式对不同乐器进行切换
-class Erhu():
+class Instrument(object):
+    def makeSound(self):
+        print("乐器发出美妙的声音")
+
+class Erhu(Instrument):
     def makeSound(self):
         print("二胡拉响人生")
 
-class Piano():
+class Piano(Instrument):
     def makeSound(self):
         print("钢琴美妙无比")
 
-class Violin():
+class Violin(Instrument):
     def makeSound(self):
         print("小提琴来啦")
 
-class Instrument():
-    def makeSound(self, obj): #obj是实例化对象
-        print("乐器发出美妙的声音")
-        obj.makeSound()
+class Main(object):
+    def show_info(self,obj):
+        self.obj.makeSound()
+
+    # def __init__(self,obj):
+    #     self.obj = obj
+    # def show_info(self):
+    #     self.obj.makeSound()
 
 erhu = Erhu()  # 类的实例化
 piano = Piano()
 violin = Violin()
 if __name__ == '__main__':
-    instrument = Instrument()
-    instrument.makeSound(erhu)
-    instrument.makeSound(piano)
-    instrument.makeSound(violin)
+    m = Main()
+    m.makeSound(erhu)
+    m.makeSound(piano)
+    m.makeSound(violin)
+# if __name__ == '__main__':
+#     instrument_list = [Instrument(), Erhu(), Piano(), Violin()]
+#     for item in  instrument_list:
+#         temp = Main(item)
+#         temp.show_inf()
