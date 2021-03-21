@@ -1,0 +1,8 @@
+#  -是列表   ：是对象，后面要+空格
+case1:
+   name: 'miya'
+   pwd: 'Lbl123456'
+
+case2:
+   name: 'miya1'
+   pwd: 'Lbl123456'

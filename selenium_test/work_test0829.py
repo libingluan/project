@@ -22,9 +22,9 @@ class Test0829():
         all = self.driver.window_handles
         self.driver.switch_to_window(all[-1])
         time.sleep(2)
-        # driver.find_element_by_class_name('s_ipt_wr').send_keys(Keys.CONTROL, 'v')
-        js = 'document.getElementsByClassName("search-combobox-input-wrap").value="{}"'.format(Keys.CONTROL, 'v')
-        self.driver.execute_script(js)
+        self.driver.find_element_by_class_name('search-combobox-input-wrap').send_keys(Keys.CONTROL, 'v')
+        # js = 'document.getElementsByClassName("search-combobox-input-wrap").value="{}"'.format(Keys.CONTROL, 'v')
+        # self.driver.execute_script(js)
         time.sleep(2)
         # 关闭新打开的窗口，退出。
         self.driver.close()
@@ -51,7 +51,8 @@ class Test0829():
         js_height = 'return document.getElementById("styleShow").scrollHeight'
         h = self.driver.execute_script(js_height)
         print(h)
-        self.driver.execute_script('document.getElementById("styleShow").scrollTop={}'.format(h))
+        # self.driver.execute_script('document.getElementById("styleShow").scrollTop={}'.format(h))
+        self.driver.execute_script('document.getElementById("styleShow").scrollTop=document.getElementById("styleShow")')
         time.sleep(2)
         self.driver.quit()
 
